@@ -1,0 +1,33 @@
+{
+    "name": "event-service",
+    "version": "0.0.1",
+    "description": "simple event service",
+    "main": "dist/index",
+    "typings": "dist/index",
+    "scripts": {
+        "prepublishOnly": "npm run compile",
+        "compile": "npm run clean && tsc -p .",
+        "watch": "tsc -w -p .",
+        "clean": "rm -rf dist",
+        "upgrade": "ncu --upgrade"
+    },
+    "bugs": {
+        "url": "https://github.com/sergeychumak/event-service/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sergeychumak/event-service"
+    },
+    "keywords": [
+        ""
+    ],
+    "author": "sergeychumakru@gmail.com",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "^20.11.30",
+        "typescript": "^5.4.3"
+    },
+    "files": [
+        "dist/lib"
+    ]
+}
