@@ -1,5 +1,5 @@
 {
-    "name": "event-service",
+    "name": "@sergeychumak/event-service",
     "version": "0.0.1",
     "description": "simple event service",
     "main": "dist/index",
@@ -16,11 +16,9 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/sergeychumak/event-service"
+        "url": "git+https://github.com/sergeychumak/event-service.git"
     },
-    "keywords": [
-        ""
-    ],
+    "keywords": [],
     "author": "sergeychumakru@gmail.com",
     "license": "MIT",
     "devDependencies": {
@@ -29,5 +27,12 @@
     },
     "files": [
         "dist/lib"
-    ]
+    ],
+    "homepage": "https://github.com/sergeychumak/event-service#readme",
+    "dependencies": {
+        "undici-types": "^5.26.5"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
 }
