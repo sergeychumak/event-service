@@ -42,12 +42,12 @@ eventsClass.trigger<TOnWindowResize>(ENUM_EVENTS.onWindowResize, {
 ``` javascript
 const eventsClass = new EventsClass<ENUM_EVENTS>()
 
-const a = (data: TOnWindowResize) => {
-    console.log('a', data)
+const a = (payload: TOnWindowResize) => {
+    console.log('a', payload)
 }
 
-const b = (data: TOnWindowResize) => {
-    console.log('b', data)
+const b = (payload: TOnWindowResize) => {
+    console.log('b', payload)
 }
 
 // subscribe
