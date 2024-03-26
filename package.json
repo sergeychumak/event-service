@@ -1,9 +1,9 @@
 {
     "name": "@sergeychumak/event-service",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "description": "simple event service",
-    "main": "dist/index",
-    "typings": "dist/index",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts",
     "scripts": {
         "prepublishOnly": "npm run compile",
         "compile": "npm run clean && tsc -p .",
@@ -25,9 +25,6 @@
         "@types/node": "^20.11.30",
         "typescript": "^5.4.3"
     },
-    "files": [
-        "dist/lib"
-    ],
     "homepage": "https://github.com/sergeychumak/event-service#readme",
     "dependencies": {
         "undici-types": "^5.26.5"
