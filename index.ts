@@ -1,4 +1,4 @@
-type TYPE_FN = (data: any) => void
+type TYPE_FN = (payload: any) => void
 
 export default class EventsClass<T extends string | number | symbol> {
   events: { [key in T]?: TYPE_FN[] }
@@ -25,9 +25,9 @@ export default class EventsClass<T extends string | number | symbol> {
     }
   }
 
-  public trigger<K>(eventName: T, data: K): void {
+  public trigger<K>(eventName: T, payload: K): void {
     this.events[eventName]?.forEach((fn) => {
-      fn(data)
+      fn(payload)
     })
   }
 }
