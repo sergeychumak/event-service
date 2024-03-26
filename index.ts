@@ -7,12 +7,12 @@ export default class EventsClass<T extends string | number | symbol> {
     this.events = {}
   }
 
-  on(eventName: T, fn: TYPE_FN): void {
+  public on(eventName: T, fn: TYPE_FN): void {
     this.events[eventName] = this.events[eventName] || []
     this.events[eventName]?.push(fn)
   }
 
-  off(eventName: T, fn: TYPE_FN): void {
+ public off(eventName: T, fn: TYPE_FN): void {
     const { length } = this.events[eventName] || []
     for (let i = 0; i < length; i++) {
       const element = this.events[eventName]
@@ -25,9 +25,9 @@ export default class EventsClass<T extends string | number | symbol> {
     }
   }
 
-  trigger<K>(eventName: T, data: K): void {
+  public trigger<K>(eventName: T, data: K): void {
     this.events[eventName]?.forEach((fn) => {
-      fn(<K>data)
+      fn(data)
     })
   }
 }
