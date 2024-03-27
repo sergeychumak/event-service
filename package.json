@@ -1,35 +1,44 @@
 {
-    "name": "@sergeychumak/event-service",
-    "version": "0.0.3",
-    "description": "simple event service",
-    "main": "dist/index.js",
-    "typings": "dist/index.d.ts",
-    "scripts": {
-        "prepublishOnly": "npm run compile",
-        "compile": "npm run clean && tsc -p .",
-        "watch": "tsc -w -p .",
-        "clean": "rm -rf dist",
-        "upgrade": "ncu --upgrade"
-    },
-    "bugs": {
-        "url": "https://github.com/sergeychumak/event-service/issues"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/sergeychumak/event-service.git"
-    },
-    "keywords": [],
-    "author": "sergeychumakru@gmail.com",
-    "license": "MIT",
-    "devDependencies": {
-        "@types/node": "^20.11.30",
-        "typescript": "^5.4.3"
-    },
-    "homepage": "https://github.com/sergeychumak/event-service#readme",
-    "dependencies": {
-        "undici-types": "^5.26.5"
-    },
-    "publishConfig": {
-        "access": "public"
-    }
+  "name": "@sergeychumak/event-service",
+  "version": "0.0.3",
+  "description": "simple event service",
+  "author": "sergeychumakru@gmail.com",
+  "license": "MIT",
+  "homepage": "https://github.com/sergeychumak/event-service#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergeychumak/event-service.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sergeychumak/event-service/issues"
+  },
+  "keywords": [
+    "event service"
+  ],
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "prepublishOnly": "npm run compile",
+    "compile": "npm run clean && tsc -p .",
+    "watch": "tsc -w -p .",
+    "clean": "rm -rf dist",
+    "upgrade": "ncu --upgrade",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "undici-types": "^5.26.5"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.10.1",
+    "@types/node": "^20.11.30",
+    "eslint": "9.0.0-rc.0",
+    "typescript": "^5.4.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }
