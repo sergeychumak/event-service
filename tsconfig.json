@@ -25,10 +25,10 @@
     "types": [
       "node"
     ],
-    "strict": true,
     "strictNullChecks": true,
     "declaration": true,
     "importHelpers": true,
+    "outDir": "./dist",
     "sourceMap": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
