@@ -1,6 +1,6 @@
 {
   "name": "@sergeychumak/event-service",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "simple event service",
   "author": "sergeychumakru@gmail.com",
   "license": "MIT",
@@ -22,7 +22,7 @@
   "typings": "dist/index.d.ts",
   "scripts": {
     "prepublishOnly": "npm run compile",
-    "compile": "npm run clean && tsc -p .",
+    "compile": "npm run clean && npm run lint:fix && tsc -p .",
     "watch": "tsc -w -p .",
     "clean": "rm -rf dist",
     "upgrade": "ncu --upgrade",
