@@ -1,7 +1,7 @@
 type TYPE_FN = (payload: any) => void
 
 export default class EventsClass<T extends string | number | symbol> {
-  events: { [key in T]?: TYPE_FN[] }
+  private events: { [key in T]?: TYPE_FN[] }
 
   constructor() {
     this.events = {}
